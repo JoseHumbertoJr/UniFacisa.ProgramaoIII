@@ -6,19 +6,31 @@ public class ContaCorrente {
 	private float valorLimite;
 	
 	
-	public void sacar(float valor) {
+	public void sacar(float valor) throws SaldoInsuficienteException, ValorInvalidoException {
 		if(valor > saldo) {
-			throw new IllegalArgumentException("sem saldo suficiente");
+			throw new SaldoInsuficienteException("Sem saldo Suficiente!!!");
+		}
+		else if (valor <= 0) {
+			throw new ValorInvalidoException("Valor Inválido!");
+		}
+		else {
+			this.saldo-=valor;
 		}
 	}
-	public void depositar(float valor) throws valorInvalidoException {
+	public void depositar(float valor) throws ValorInvalidoException {
 		if(valor <= 0) {
-			throw new valorInvalidoException("valor inválido");
+			throw new ValorInvalidoException("Valor inválido!");
+		}
+		else {
+			this.saldo+=valor;
 		}
 	}
-	public void setValorLimite(float valor) throws valorInvalidoException {
+	public void setValorLimite(float valor) throws ValorInvalidoException {
 		if(valor <= 0) {
-			throw new valorInvalidoException("valor inválido");
+			throw new ValorInvalidoException("valor inválido");
 		}
+	}
+	public float getSaldo() {
+		return saldo;
 	}
 }
