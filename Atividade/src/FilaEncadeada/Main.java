@@ -14,7 +14,7 @@ public class Main {
 		fila.enqueue(victor);
 		fila.enqueue(aleff);
 		fila.enqueue(matheus);
-		fila.Dequeue();
+		fila.dequeue();
 		fila.imprime();
 	}
 }

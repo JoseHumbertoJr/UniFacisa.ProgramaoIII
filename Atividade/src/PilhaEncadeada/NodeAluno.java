@@ -45,6 +45,7 @@ public class NodeAluno {
 	public void clear() {
 		Aluno temp = null;
 		this.inicio = temp;
+		this.inseridos = 0;
 	}
 	public void imprimePilha() {
 		Aluno temp = this.inicio;

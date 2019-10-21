@@ -18,7 +18,7 @@ public class FilaEncadeada {
 		}
 		inseridos++;
 	}
-	public Object Dequeue() {
+	public Object dequeue() {
 		this.inicio = this.inicio.getProximo();
 		inseridos--;
 		return this.inicio.getNome();
@@ -27,8 +27,18 @@ public class FilaEncadeada {
 	public int size() {
 		return inseridos;
 	}
+	public Object getFront() {
+		return this.inicio.getNome();
+	}
+	public Object getLast() {
+		Aluno temp = this.inicio;
+		while(temp.getProximo() != null) {
+			temp = temp.getProximo();
+		}
+		return temp.getNome();
+	}
 	
-	public boolean getReareisEmpty() {
+	public boolean isEmpty() {
 		return inseridos == 0;
 	}
 	public void imprime() {

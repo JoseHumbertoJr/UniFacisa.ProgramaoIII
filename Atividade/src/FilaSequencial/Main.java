@@ -8,7 +8,7 @@ public class Main {
 		fila.enqueue("Carol Rosa");
 		fila.enqueue("Vitor Belfort");
 		fila.enqueue("José Aldo");
-		fila.Dequeue();
+		fila.dequeue();
 		System.out.println(fila.getFront());
 		System.out.println(fila.size());
 	}

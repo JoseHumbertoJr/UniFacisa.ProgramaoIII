@@ -49,6 +49,7 @@ public class PilhaSequencial {
 				array[i] = null;
 			}
 		}
+		this.inseridos = 0;
 	}
 	public void imprimeLista() {
 		for(int i = 0; i < inseridos; i++) {

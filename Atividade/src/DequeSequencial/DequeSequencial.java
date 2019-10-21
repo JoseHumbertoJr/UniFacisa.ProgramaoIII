@@ -44,7 +44,9 @@ public class DequeSequencial {
 			System.out.println("Campo vazio");
 		}
 		else {
-			array[0] = null;
+			for (int i = 0; i < inseridos; i++) {
+				array[i] = array[i+1];
+			}
 			inseridos--;
 		}
 		return array[0];
@@ -61,6 +63,12 @@ public class DequeSequencial {
 	}
 	public Object getFront() {
 		return array[0];
+	}
+	public Object getLast(){
+		if(inseridos == 0) {
+			throw new NullPointerException();
+		}
+		return array[inseridos-1];
 	}
 	public int size() {
 		return inseridos;

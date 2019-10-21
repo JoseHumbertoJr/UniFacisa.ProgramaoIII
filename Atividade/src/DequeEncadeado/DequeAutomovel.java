@@ -60,10 +60,24 @@ public class DequeAutomovel {
 	public String getFront() {
 		return this.inicio.getNome();
 	}
+	public String getLast() {
+		Automovel temp = this.inicio;
+		while(temp.getProximo() != null) {
+			temp = temp.getProximo();
+		}
+		return temp.getNome();
+	}
 	public int size() {
 		return inseridos;
 	}
 	public boolean isEmpty() {
 		return inseridos == 0;
+	}
+	public void imprime() {
+		Automovel temp = this.inicio;
+		while(temp != null) {
+			System.out.println(temp.getNome());
+			temp = temp.getProximo();
+		}
 	}
 }

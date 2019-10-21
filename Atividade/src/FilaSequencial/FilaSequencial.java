@@ -18,7 +18,7 @@ public class FilaSequencial {
 		}
 		inseridos++;
 	}
-	public Object Dequeue() {
+	public Object dequeue() {
 		if(array[0] == null) {
 			throw new NullPointerException();
 		}
@@ -39,7 +39,7 @@ public class FilaSequencial {
 		return inseridos;
 	}
 	
-	public boolean getReareisEmpty() {
+	public boolean isEmpty() {
 		return inseridos == 0;
 	}
 	
